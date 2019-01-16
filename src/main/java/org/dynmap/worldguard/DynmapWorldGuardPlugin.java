@@ -309,7 +309,7 @@ public class DynmapWorldGuardPlugin extends JavaPlugin {
             	List<org.bukkit.World> w = Bukkit.getWorlds();
                 worldsToDo = new ArrayList<World>();
                 for (org.bukkit.World wrld : w) {
-                	worldsToDo.add(platform.getWorldByName(wrld.getName()));
+                	worldsToDo.add(platform.getMatcher().getWorldByName(wrld.getName()));
                 }
             }
             while (regionsToDo == null) {  // No pending regions for world
